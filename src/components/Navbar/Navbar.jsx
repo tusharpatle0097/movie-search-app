@@ -33,7 +33,18 @@ const Navbar = () => {
                 </div>
                 <div className={`w-full ${isMenuOpen ? '' : 'hidden'} lg:block flex-grow lg:flex lg:items-center lg:w-auto`}>
                     <div className="text-sm lg:flex-grow lg:text-center">
-                        <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type="text" alt='Search Movie' placeholder='Search Movie...' className={`${isDarkMode?'bg-slate-800 text-white':'text-black'} py-2 rounded-lg px-3 w-[14rem] lg:w-[20rem]`} />
+                        <input
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            type="text"
+                            alt='Search Movie'
+                            placeholder='Search Movie...'
+                            className={`${isDarkMode ? 'bg-slate-800 text-white' : 'text-black'
+                                } py-2 rounded-lg px-3 w-[14rem] lg:w-[20rem] ${/* default styles */
+                                'hidden md:inline-block lg:inline-block' /* conditional visibility */
+                                }`}
+                        />
+
                     </div>
                     <div>
                         <button onClick={toggleDarkMode} className='flex lg:mt-0 mt-5'>
