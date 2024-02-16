@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from 'react';
 export const CallApiSearch = createContext(null);
 
 const API_KEY = 'd1856bc9';
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`;
+const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=`;
 
 
 const CallApi = (props) => {
